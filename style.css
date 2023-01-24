@@ -1,0 +1,247 @@
+/*Selectores avazados, main > p, son todos los p hijos del main, img + p es el p que va despuesd de una img, img - p es aplicar a todos los parrafos despues de img, main p:not(la excepcion)*/
+body{
+    font-family: 'Montserrat', sans-serif;
+}
+header {
+    background-color: #BBBBBB;
+    padding: 20px 0;
+}
+
+.caja{
+    width: 940px;
+    position: relative;
+    margin: 0 auto;
+}
+
+nav{
+    position: absolute;
+    top:110px;
+    right: 0;
+}
+
+nav li{
+    display: inline;
+    margin: 0 0 0 15px;
+}
+
+nav a{
+    text-transform: uppercase;
+    color: #000000;
+    font-weight: bold;
+    font-size: 22px;
+    text-decoration: none;
+}
+
+nav a:hover{
+    color: #c78c19;
+    text-decoration: underline;
+}
+
+.productos{
+    width: 940px;
+    margin: 0 auto;
+    padding: 50px;
+}
+
+
+.productos li{
+    display: inline-block;
+    text-align: center;
+    width: 30%;
+    vertical-align: top;
+    margin: 0 1.5%;
+    padding: 30px 20px;
+    box-sizing: border-box;
+    border: 2px solid #000000;
+    border-radius: 10px;
+}
+
+.productos li:hover{
+    border-color:#c78c19;
+}
+
+.productos li:active{
+    border-color:#088c19;
+}
+
+.productos h2{
+    font-size: 30px;
+    font-weight: bold;
+}
+
+.productos li:hover h2{
+    font-size: 33px;
+}
+
+.producto-descripcion{
+    font-size: 18px;
+}
+
+.producto-precio{
+    font-size: 20px;
+    font-weight: bold;
+    margin-top:10px;
+}
+
+footer{
+    text-align: center;
+    background: url(imagenes/bg.jpg);
+    padding:40px;
+}
+
+.copyright{
+    color:#FFFFFF;
+    font-size: 13px;
+    margin:20px;
+}
+form{
+    margin: 40px 0;
+}
+
+form label, form legend{
+    display: block;
+    font-size: 20px;
+    margin: 0 0 10px;
+}
+
+.input-padron{
+    display: block;
+    margin: 0 0 20px;
+    padding: 10px 25px;
+    width: 50%;
+}
+
+.checkbox{
+    margin:20px 0;
+}
+
+.enviar{
+    width: 40%;
+    padding: 15px 0;
+    font-size: 18px;
+    font-weight: bold;
+    color:white;
+    background: orange;
+    border:none;
+    border-radius: 5px;
+    transition: 1s all;
+    cursor:pointer;
+}
+
+.enviar:hover{
+    background: darkorange;
+    transform: scale(1.2);
+}
+
+table{
+    margin: 40px 40px;
+}
+
+thead{
+    background: #555555;
+    color:white;
+    font-weight: bold;
+}
+
+td,th{
+    border: 1px solid #000000;
+    padding: 8px 15px;
+}
+
+/*Aqui inicia nuestro css para el home*/
+
+
+.banner{
+    width: 100%;
+}
+.principal{
+    padding: 3em 0;
+    background: #FEFEFE;
+    width: 940px;
+    margin: 0 auto;
+
+}
+.titulo-principal{
+    text-align: center;
+    font-size: 2em; /*dos veces el tamaño padron, que es el tamaño que tiene por defecto*/
+    margin: 0 0 1em;
+    clear: left; /*cualquier configuracion que venga despues que la limpie a la izquierda*/
+}
+.principal p{ /*clase con etiqueta*/
+    margin: 0 0 1em;
+}
+.principal strong{ /*clase con etiqueta*/
+    font-weight: bold;
+}
+.principal em{
+    font-style: italic;
+}
+.utensilios{
+    width: 120px;
+    float: left; /*para que el elemento se destaque en la pnatalla, la superficie del elemento sigue siendo utilizada y los otros elementos de texto o elementos en linea se posicionan al rededor de el*/
+    margin: 0 20px 20px 0; /*el margen es sentido horario arriba, derecha, abajo e izquierda*/
+}
+.mapa{
+    padding: 3em 0;
+    background: linear-gradient(#FEFEFE,#888888); /*Para el degradado y la inclinacio*/
+
+}
+.mapa p{
+    margin: 0 0 2em;
+    text-align: center;
+}
+.mapa-contenido{
+    width: 650px;
+    margin: 0 auto;
+}
+.diferenciales{
+    padding: 3em o;
+    background: #888888;
+}
+.contenido-diferenciales{
+    width: 640px;
+    margin: 0 auto;
+}
+.lista-diferenciales{
+    width: 40%;
+    display: inline-block;
+    vertical-align: top;
+}
+.items{
+    line-height: 1.5; /*uno mas el 50% de la fuente*/
+}
+.items::before{
+    content: "⚹";
+}
+.items:first-child{ /*pseudo clase, el primer item en este caso lo vamos a modificar , podemos modificar el last o nth-child() para el numero de item que queremos modificar*/
+    font-weight: bold;
+}
+.imagen-diferenciales{
+    width: 60%;    
+    transition: 400ms; /*un retraso*/
+    box-shadow: 10px 10px 10px 5px black; /*Sombra, el orden es abajo, a la derecha, difuminacion, expansion y color, se pueden poner mas de una sombra, separandolos con una , */
+}
+.imagen-diferenciales:hover{ /*Opacidad*/
+    opacity: 0.3;
+}
+.video{
+    width: 560px;
+    margin: 1em auto;
+}
+
+/*medias queries*/
+
+/* @media screen and (max-width:480px){
+    h1{
+        text-align: center;
+    }
+    nav{
+        position: static;
+    }
+    .caja, .principal, .mapa-contenido, .video{
+        width: auto;
+    }
+    .lista-diferenciales, .imagen-diferenciales{
+        width: 100%;
+    }
+} */
