@@ -1,0 +1,3 @@
+# este archivo es para poner los archivos y carpetas que no queremos agregar a nuestro git, la pimera es una carpeta y el segundo un archivo 
+config/
+a.config
